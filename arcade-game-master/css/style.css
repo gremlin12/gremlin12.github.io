@@ -1,0 +1,185 @@
+/* Body and Game Area */
+
+body {
+    background-color: #151515;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#gameArea {
+    left: 30%;
+    position: absolute;
+    top: 5%; 
+}
+
+#gameArea h1 {
+    color: red;
+    font-family: 'Creepster', cursive;
+    margin: 0;
+    text-align: center;
+}
+
+canvas {
+    height: 100%;
+    width: 100%;
+}
+
+/* Stats Panel (Score, Lives, Skill Level, How To Play) */
+
+#statsPanel {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* 'How To Play' Link */
+
+a {
+    color: #66FFFF;
+}
+
+
+/* Game-Over Overlay */
+
+#game-over {
+    background: #F2F2F2;
+    left: 30%;  
+    padding: 15px;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    visibility: hidden;   
+}
+
+#game-over h2 {
+    color: red;
+}
+
+/* Play-Again Button */
+
+#play-again {
+    text-align: center;
+}
+
+/* Instructions Modal */
+
+#overlay {
+    height: 100%;
+    left: 0;
+    position: absolute; 
+    text-align: left;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1000;
+}
+
+#overlay-content  {
+    background-color: #F2F2F2;
+    font-family: Arial;
+    font-size: 11pt;    
+    margin: 100px auto;
+    padding: 10px;
+    text-align: right;      
+    width: 300px;
+}
+
+#overlay-content p, h3 {
+    text-align: left;
+}
+
+#overlay-content h3 {
+    font-family: Arial;
+    font-size: 14pt;
+    margin-bottom: 5px;
+    margin-top: 5px;    
+}
+
+#overlay-content img {
+    padding-right: 5px;
+}
+
+#overlay-content a {
+    color: #0000FF;
+}
+
+.flex {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Mobile Friendly */
+
+#mobile-controls {
+    bottom: -160px;
+    display: none;
+    position: absolute;
+    left: 20%;
+}
+
+#mobile-controls img {
+    max-height: 80px;
+    max-width: 80px;
+}
+
+#row img {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+    #gameArea {
+        position: absolute;
+        left: 30%;
+        top: 0; 
+    }
+
+}
+
+@media only screen and (max-width:900px) {
+    #gameArea {
+        position: absolute;
+        left: 20%;
+        top: 0; 
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #gameArea {
+        font-size: 13px; 
+        position: absolute;
+        left: 0;
+        top: 0; 
+    }
+    #mobile-controls {
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #gameArea {
+        font-size: 11px;
+    }
+    #gameOver {
+        position: absolute;
+        left:10%;
+        top: 10%;
+    }
+    #mobileControls {
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        left: 0;
+    }
+}

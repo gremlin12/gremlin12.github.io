@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  <!-- Fix compatibility for Internet Explorer and mobile devices-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bug Game</title>
+  <link href='http://fonts.googleapis.com/css?family=Creepster' rel='stylesheet'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Game Area includes heading, Stats Panel and canvas -->
+  <div id="gameArea">
+    <h1>Revenge of the Mutant Ladybugs</h1>    
+    <div id="statsPanel"> 
+      <div id="score"></div>
+      <div id="lives"></div>
+      <div id="level"></div>
+      <div id="instructions">
+        <a href="#" onclick="overlay()">How to Play</a>
+      </div>
+    </div>
+    <!-- Gave Over overlay is "hidden" -->
+    <div id="game-over">
+      <h2>GAME OVER</h2>
+      <button id="play-again">Play Again</button> 
+    </div>
+    <!-- Player-movement controls for mobile devices only display on small screens-->
+    <div id="mobile-controls">
+      <div id="row">
+        <img src="images/left-arrow.png" onclick="mobileLeft()" alt="left-arrow">
+        <img src="images/up-arrow.png" onclick="mobileUp()" alt="up-arrow">
+        <img src="images/down-arrow.png" onclick="mobileDown()" alt="down-arrow">
+        <img src="images/right-arrow.png" onclick="mobileRight()" alt="right-arrow">
+      </div>
+    </div>          
+  </div>
+ 
+  <script src="js/resources.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/engine.js"></script>
+
+  <!-- Instructions Modal -->
+  <div id="overlay">
+    <div id="overlay-content">
+      <a href= "#" onclick="overlay()" id="x"><img src="images/x-icon.png" alt="close window"></a>
+      <h3>The Human Race is Doomed...</h3>
+      <p>Giant ladybugs, mutated and energized by radioactive crystals, have overrun the city.</p>
+      <h3>Only You Can Save Us</h3>
+      <p>Get across the road to the water without becoming ladybug-food! On your way, collect as many crystals or other tokens as you can.</p>
+      <div class="flex">
+        <img src="images/arrow.png" alt="arrow">
+        <p>Use arrow keys to move your avatar.</p>
+      </div>
+      <div class="flex">
+        <img src= "images/crystal-icon.png" height="40" width="40" alt="crystal">
+        <p>Collect crystals to gain extra points.</p>  
+      </div>
+      <div class="flex">
+        <img src="images/heart-icon.png" height="40" width="40" alt="heart">
+        <p>Collect hearts to win extra lives.</p>
+      </div>
+      <div class="flex">
+        <img src="images/key-icon.png" height="40" width="40" alt="key">
+        <p>Keys to the Secret Laboratory help control the enemy bug population.</p>
+      </div>  
+      <div class="flex">
+        <img src="images/star-icon.png" height="40" width="40" alt="star">
+        <p>Gain megapoints by collecting stars.</p>
+      </div>  
+      <p>Click here to <a href="#" onclick="overlay()">return to game!</a></p>
+    </div>  
+  </div>
+</body>
+</html>
